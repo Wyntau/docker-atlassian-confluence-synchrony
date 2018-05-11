@@ -13,7 +13,7 @@ ENV CLUSTER_JOIN_PROPERTIES="-Dcluster.join.type=multicast"
 
 ARG SYNCHRONY_VERSION=6.8.2
 ARG SYNCHRONY_ZIP=atlassian-confluence-${SYNCHRONY_VERSION}.tar.gz
-ARG SYNCHRONY_DOWNLOAD_URL=https://www.atlassian.com/software/confluence/downloads/binary/${SYNCHRONY_ZIP}
+ARG SYNCHRONY_DOWNLOAD_URL=https://product-downloads.atlassian.com/software/confluence/downloads/${SYNCHRONY_ZIP}
 
 ARG JDBC_DRIVER_JAR=postgresql-42.1.1.jar
 ARG JDBC_DRIVER_JAR_TARGZ_PATH=atlassian-confluence-${SYNCHRONY_VERSION}/confluence/WEB-INF/lib/${JDBC_DRIVER_JAR}
