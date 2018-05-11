@@ -26,8 +26,7 @@ ARG SYNCHRONY_DIR_TARGZ_PATH=atlassian-confluence-${SYNCHRONY_VERSION}/bin/${SYN
 
 COPY ./getip.sh ${SYNCHRONY_HOME}/
 
-RUN mkdir -p /opt/atlassian \
-    && wget ${SYNCHRONY_DOWNLOAD_URL} \
+RUN wget ${SYNCHRONY_DOWNLOAD_URL} \
     && tar -xz -C "/opt/atlassian/" --strip-components=2 ${SYNCHRONY_DIR_TARGZ_PATH} < ${SYNCHRONY_ZIP} \
     && tar -xz -C "${SYNCHRONY_HOME}" --strip-components=4 ${JDBC_DRIVER_JAR_TARGZ_PATH} < ${SYNCHRONY_ZIP} \
     && tar -xz -C "${SYNCHRONY_HOME}" --strip-components=4 ${SYNCHRONY_STANDALONE_JAR_TARGZ_PATH} < ${SYNCHRONY_ZIP} \
